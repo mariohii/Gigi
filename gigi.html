@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+  <meta charset='UTF-8'>
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/RominaMartin/pen/XyKwoy">
+
+  
+  
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <style id="INLINE_PEN_STYLESHEET_ID">
+    @charset "UTF-8";
+body {
+  background: #eee;
+  overflow: hidden;
+  font-family: "Quicksand";
+}
+
+.header {
+  position: left;
+  left: 10px;
+  top: 10px;
+}
+.header h1,
+.header h2 {
+  margin: 0;
+}
+.header h1 {
+  color: #757780;
+}
+.header .number {
+  color: #dd7f1b;
+}
+.header .type {
+  color: #eb2d2d;
+}
+.header .social a img {
+  margin-top: 10px;
+  height: 1.5em;
+}
+
+.content {
+  width: 100%;
+  height: 60vh;
+  margin: 20vh auto;
+  position: relative;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.pie {
+  width: 40%;
+  height: 60%;
+  left: 110%;
+  bottom: 0;
+  position: absolute;
+  -webkit-animation: swing 3.5s linear infinite;
+          animation: swing 3.5s linear infinite;
+}
+
+.mold {
+  width: 88%;
+  height: 30%;
+  position: absolute;
+  background: repeating-linear-gradient(to right, #c4e6e3, #c4e6e3 20px, #fff 20px, #fff 40px);
+  left: 5%;
+  bottom: 0;
+  border: 4px solid #333;
+  border-radius: 5px 5px 25% 25%;
+  z-index: 0;
+}
+
+.head {
+  width: 100%;
+  height: 50%;
+  background: #dd7f1b;
+  left: 0;
+  top: 15%;
+  position: absolute;
+  border-radius: 50% 50% 0% 0%;
+  z-index: 2;
+  border: 4px solid #333;
+  border-bottom: transparent;
+}
+.head .left_eye {
+  width: 2.5vh;
+  height: 2.5vh;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  -webkit-animation: blink 2s linear infinite;
+          animation: blink 2s linear infinite;
+}
+.head .right_eye {
+  width: 2.5vh;
+  height: 2.5vh;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  -webkit-animation: blink 2s linear infinite;
+          animation: blink 2s linear infinite;
+}
+.head .smile {
+  position: absolute;
+  left: 47.5%;
+  top: 70%;
+  width: 5vh;
+  height: 1vh;
+  border-bottom-left-radius: calc(2vh + 4px);
+  border-bottom-right-radius: calc(2vh + 4px);
+  border: 4px solid #000;
+  border-top: 0;
+}
+
+.bubbles {
+  width: 100%;
+  height: 70%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.bubble_1 {
+  position: relative;
+  background: #dd7f1b;
+  height: 20%;
+  width: 20%;
+  left: 0%;
+  top: 85%;
+  border: 4px solid #333;
+  border-radius: 0 0 50% 50%;
+}
+.bubble_1::before {
+  content: "";
+  position: absolute;
+  background: #dd7f1b;
+  height: 100%;
+  width: 100%;
+  left: 90%;
+  top: 20%;
+  border: 4px solid #333;
+  border-radius: 0 0 50% 50%;
+}
+.bubble_1::after {
+  content: "";
+  position: absolute;
+  background: #dd7f1b;
+  height: 100%;
+  width: 100%;
+  left: 200%;
+  top: 5%;
+  border: 4px solid #333;
+  border-radius: 0 0 50% 50%;
+}
+
+.bubble_2 {
+  position: absolute;
+  background: #dd7f1b;
+  height: 20%;
+  width: 20%;
+  left: 64%;
+  top: 85%;
+  border: 4px solid #333;
+  border-radius: 0 0 50% 50%;
+}
+.bubble_2::before {
+  content: "";
+  position: absolute;
+  background: #dd7f1b;
+  height: 100%;
+  width: 82%;
+  left: 88%;
+  top: 20%;
+  border: 4px solid #333;
+  border-radius: 0 0 50% 50%;
+}
+
+.shadow {
+  position: absolute;
+  width: 5%;
+  height: 60%;
+  top: 15%;
+  left: 3%;
+  background: #dd984d;
+  border-radius: 45% 25% 25% 45%;
+  transform: rotate(25deg);
+  border-left: 2.5vh solid #dd984d;
+}
+
+.apple {
+  background: #eb2d2d;
+  position: absolute;
+  width: 20%;
+  height: 30%;
+  border-radius: 36% 36% 41% 41%/42% 42% 75% 75%;
+  left: -35%;
+  bottom: 0;
+  border: 4px solid #333;
+  -webkit-animation: swing 3.5s linear infinite;
+          animation: swing 3.5s linear infinite;
+}
+.apple::after {
+  content: "";
+  position: absolute;
+  left: 45%;
+  top: -20px;
+  width: 5px;
+  height: 20px;
+  background: #000;
+  border-radius: 0% 75% 0 0;
+  transform: rotate(5deg);
+}
+.apple::before {
+  content: "";
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  width: 10%;
+  height: 40%;
+  border-radius: 20% 50% 50% 20%;
+  background: #e05c5a;
+  transform: rotate(-10deg);
+}
+.apple .left_eye {
+  width: 2vh;
+  height: 2vh;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 30%;
+  top: 40%;
+  -webkit-animation: blink 1.5s linear infinite;
+          animation: blink 1.5s linear infinite;
+}
+.apple .right_eye {
+  width: 2vh;
+  height: 2vh;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  -webkit-animation: blink 1.5s linear infinite;
+          animation: blink 1.5s linear infinite;
+}
+.apple .smile {
+  position: absolute;
+  left: 32%;
+  top: 60%;
+  width: 3vh;
+  height: 1vh;
+  border-bottom-left-radius: calc(2vh + 4px);
+  border-bottom-right-radius: calc(2vh + 4px);
+  border: 4px solid #000;
+  border-top: 0;
+}
+
+.content h2 {
+  width: 100%;
+  text-align: center;
+  height: 4em;
+}
+.content h2::after {
+  content: "❤";
+  color: #ca1c24;
+  -webkit-animation: beat 1s linear infinite;
+          animation: beat 1s linear infinite;
+}
+
+
+.content h1 {
+  width: 100%;
+  text-align: center;
+  height: 2em;
+}
+.content h1::after {
+  content: "❤";
+  color: #ca1c24;
+  -webkit-animation: beat 1s linear infinite;
+          animation: beat 1s linear infinite;
+}
+
+@-webkit-keyframes beat {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+@keyframes beat {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+@-webkit-keyframes blink {
+  70% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.5, 0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes blink {
+  70% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.5, 0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes swing {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+  
+
+<div class="content">
+<h1>Gigi</h1>
+  <h2>Una mujer que parecería no existir ahora está frente a mí, mujer que conocí hace tiempo, hace años, pero estando solo en mis sueños, Te puedo ver o tocar, pero creo que no puede ser que estés ahí, Poco a poco puedo comprender que estás ahí cuando estás frente a mí y proporcionalmente a ello puedo quererte un poco más cada vez. La sinceridad y compañía puede ser todo y he visto todo eso en tus hechos o palabras, con esa Combinación con tu forma de ser tan tierna, siendo una persona Hermosa tanto por dentro y por fuera. <br><br>
+Se entiende que la vida es un conjunto de momentos de los cuales algunos quedan pausados, se quedan grabados para siempre, esos recuerdos comúnmente son los más bonitos. <br><br>
+Entonces he sentido que los momentos son mejor contigo, ya que tú puedes endulzar tan fácilmente cada minuto y cada detalle con tu dulce forma de ser, tienes una buena habilidad para endulzar a detalle cada momento.
+</h2>
+  <div class="pie">
+    <div class="head">
+      <div class="face">
+        <div class="left_eye"></div>
+        <div class="right_eye"></div>
+        <div class="smile"></div>
+        <div class="shadow"></div>
+      </div>
+    </div>
+    <div class="bubbles">
+      <div class="bubble_1"></div>
+      <div class="bubble_2"></div>
+    </div>
+    <div class="mold"></div>
+  </div>
+  <div class="apple">
+    <div class="left_eye"></div>
+    <div class="right_eye"></div>
+    <div class="smile"></div>
+  </div>
+</div>
+  
+  
+</body>
+
+</html>

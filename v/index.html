@@ -1,12 +1,145 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+
+  <title>Drag paper proposal</title>
+
+    <link rel="canonical" href="https://codepen.io/alonsohi/pen/wBvaoqo">
+  
+  
+  
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 1000px;
+  background-image: url("fondo.jpg");
+  background-position: center center;
+}
+.paper {
+  background-image: url("2-Millimeter-Paper-Background-copy.webp?ssl=1");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px;
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  position: absolute;
+}
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+}
+.paper.image {
+  padding: 10px;
+}
+.paper.image p {
+  font-size: 30px;
+}
+img {
+  max-width: 200px;
+  width: 100%;
+  user-select: none;
+}
+.paper.heart::after {
+  content: "";
+  background-image: url('cartoon-1294994__340.webp');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+.paper.red {
+/*   filter: hue-rotate(90deg); */
+}
+.paper:nth-of-type(3n) {
+  background-position: left top;
+}
+.paper:nth-of-type(3n) {
+/*   filter: hue-rotate(200deg); */
+}
+p {
+  font-family: 'Zeyada';
+  font-size: 50px;
+  color: rgb(0,0,100);
+  opacity: 0.75;
+  user-select: none;
+  
+}
+
+.p3 {
+  width: 100%;
+  text-align: center;
+  height: 2em;
+}
+.p3::after {
+  content: "❤";
+  color: #ca1c24;
+  -webkit-animation: beat 1s linear infinite;
+          animation: beat 1s linear infinite;
+}
+@-webkit-keyframes beat {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+@keyframes beat {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  
+
+
   <meta charset="UTF-8">
   <title>saro-rosys ❤️</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap">
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
+
+
 
 <!-- Developed by Saravanan  -->
 <div class="paper heart">
@@ -71,8 +204,81 @@
 <p class="p1">Puedes arrastras este papel que estorba? 👀</p>
 </div>
 <!-- javascript file -->
-  <script  src="script.js"></script>
+  <script src="script.js"></script>
   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.18/interact.min.js">
-</body>
-</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.18/interact.min.js"></script>
+
+
+  
+      <script id="rendered-js">
+// target elements with the "draggable" class
+interact('.paper').
+draggable({
+  // enable inertial throwing
+  inertia: true,
+  // keep the element within the area of it's parent
+  modifiers: [
+  interact.modifiers.restrictRect({
+    restriction: 'parent',
+    endOnly: true })],
+
+
+  // enable autoScroll
+  autoScroll: true,
+
+  listeners: {
+    // call this function on every dragmove event
+    move: dragMoveListener,
+
+    // call this function on every dragend event
+    end(event) {
+
+    } } });
+
+
+
+function dragMoveListener(event) {
+  var target = event.target;
+  // keep the dragged position in the data-x/data-y attributes
+  var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+  var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+  // translate the element
+  target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+
+  // update the posiion attributes
+  target.setAttribute('data-x', x);
+  target.setAttribute('data-y', y);
+}
+
+// this function is used later in the resizing and gesture demos
+window.dragMoveListener = dragMoveListener;
+
+interact('.tap-target').
+draggable({ manualStart: true }).
+on('move', function (event) {
+  var interaction = event.interaction;
+
+  // if the pointer was moved while being held down
+  // and an interaction hasn't started yet
+  if (interaction.pointerIsDown && !interaction.interacting()) {
+    var original = event.currentTarget,
+    // create a clone of the currentTarget element
+    clone = event.currentTarget.cloneNode(true);
+
+    // insert the clone to the page
+    // TODO: position the clone appropriately
+    document.body.appendChild(clone);
+
+    // start a drag interaction targeting the clone
+    interaction.start({ name: 'drag' }, event.interactable, clone);
+  }
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+</body></html>

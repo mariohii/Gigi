@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>saro-rosys ❤️</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Developed by Saravanan  -->
+<div class="paper heart">
+</div>
+  <div class="paper red">
+<p class="p1">Esto vale por una ida a...</p>
+<p class="p3">Encanto</p>
+<p class="p1">No tirar este papel</p>
+</div>
+  <div class="paper red">
+<p class="p1">Quieres ser mi valentin❤️?</p>
+<p class="p3">Gigi</p>
+</div>
+<div class="paper red">
+<p class="p1">Te quiero preguntar</p>
+<p class="p2">Sii tuu? ❤️</p>
+</div>
+
+<div class="paper image">
+  <p> Hemos confirmado lo que sentimos</p>
+    <p> ️Y aun falta mas en el camino❤️  </p>
+   <img src="fotos/p6.jpg" />
+</div>
+
+<div class="paper image">
+  <p> Se que tenemos un bonito Futuro</p>
+    <p> ️❤️  </p>
+   <img src="fotos/p5.jpg" />
+</div>
+<div class="paper image">
+   <p> Desde el principio</p>
+    <p> Conectamos ❤️</p>
+  <img src="fotos/p4.jpg" />
+</div>
+<div class="paper image">
+  <p> Haz sido mi mas hermosa</p>
+    <p>Compañera 😍 </p>
+   <img src="fotos/p3.jpg" />
+</div>
+<div class="paper image">
+   <p> Somos una hermosa</p>
+    <p> pareja 😎</p>
+  <img src="fotos/p2.jpg" />
+</div>
+<div class="paper image">
+  <p>Hemos pasado Mmomentos</p>
+   <p> Muy Bonitos ❤️ </p>
+  <img src="fotos/p1.jpg" />
+</div>
+
+
+  <div class="paper red">
+<p class="p1"> La Mujer que Amo</p>
+<p class="p2">Y me quiero quedar pa siempre 🥰</p>
+</div>
+<div class="paper">
+<p class="p1">Mi Novia </p>
+  <p class="p1">La mas Hermosa <span style="color: red !important;">❤️</span></p>
+</div>
+<div class="paper draggable">
+<p class="p1">Buenos dias! 😘</p>
+<p class="p1">Puedes arrastras este papel que estorba? 👀</p>
+</div>
+<!-- javascript file -->
+  <script  src="script.js"></script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.18/interact.min.js">
+</body>
+</html>

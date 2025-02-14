@@ -31,11 +31,11 @@ body {
   align-items: center;
   justify-content: center;
   background-size: 1000px;
-  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  background-image: url("fondo.jpg");
   background-position: center center;
 }
 .paper {
-  background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+  background-image: url("2-Millimeter-Paper-Background-copy.webp?ssl=1");
   background-size: 500px;
   background-position: center center;
   padding: 20px 100px;
@@ -57,13 +57,13 @@ body {
   font-size: 30px;
 }
 img {
-  max-height: 200px;
+  max-width: 200px;
   width: 100%;
   user-select: none;
 }
 .paper.heart::after {
   content: "";
-  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  background-image: url('cartoon-1294994__340.webp');
   width: 100%;
   height: 100%;
   position: absolute;
@@ -91,6 +91,35 @@ p {
   user-select: none;
   
 }
+
+.p3 {
+  width: 100%;
+  text-align: center;
+  height: 2em;
+}
+.p3::after {
+  content: "❤";
+  color: #ca1c24;
+  -webkit-animation: beat 1s linear infinite;
+          animation: beat 1s linear infinite;
+}
+@-webkit-keyframes beat {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+@keyframes beat {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
 </style>
 
   <script>
@@ -113,40 +142,67 @@ p {
 
 
 <!-- Developed by Saravanan  -->
+<!-- Developed by Saravanan  -->
 <div class="paper heart">
 </div>
-<div class="paper image">
-  <p> and I fallen in</p>
-    <p>Love with You 😍 </p>
-   <img src="https://iili.io/HSzXpzg.jpg">
-</div>
-<div class="paper image">
-  <p< p="">
-  <img src="https://iili.io/HSzXbmF.jpg">
-</p<></div>
-<div class="paper image">
-  <p>How can be </p>
-   <p> someone so cute ❤️ </p>
-  <img src="https://iili.io/HSzXyXa.jpg">
+  <div class="paper red">
+<p class="p1">Esto vale por una ida a...</p>
+<p class="p3">Encanto</p>
+<p class="p1">No tirar este papel</p>
 </div>
   <div class="paper red">
 <p class="p1">Quieres ser mi valentin❤️?</p>
-<p class="p2">Mi Gigi😍</p>
+<p class="p3">Gigi</p>
 </div>
 <div class="paper red">
 <p class="p1">Te quiero preguntar</p>
 <p class="p2">Sii tuu? ❤️</p>
 </div>
+
+<div class="paper image">
+  <p> Hemos confirmado lo que sentimos</p>
+    <p> ️Y aun falta mas en el camino❤️  </p>
+   <img src="fotos/p6.jpg" />
+</div>
+
+<div class="paper image">
+  <p> Se que tenemos un bonito Futuro</p>
+    <p> ️❤️  </p>
+   <img src="fotos/p5.jpg" />
+</div>
+<div class="paper image">
+   <p> Desde el principio</p>
+    <p> Conectamos ❤️</p>
+  <img src="fotos/p4.jpg" />
+</div>
+<div class="paper image">
+  <p> Haz sido mi mas hermosa</p>
+    <p>Compañera 😍 </p>
+   <img src="fotos/p3.jpg" />
+</div>
+<div class="paper image">
+   <p> Somos una hermosa</p>
+    <p> pareja 😎</p>
+  <img src="fotos/p2.jpg" />
+</div>
+<div class="paper image">
+  <p>Hemos pasado Mmomentos</p>
+   <p> Muy Bonitos ❤️ </p>
+  <img src="fotos/p1.jpg" />
+</div>
+
+
   <div class="paper red">
 <p class="p1"> La Mujer que Amo</p>
-<p class="p2">Y me quiero quedar pa siempre 😍</p>
+<p class="p2">Y me quiero quedar pa siempre 🥰</p>
 </div>
 <div class="paper">
 <p class="p1">Mi Novia </p>
   <p class="p1">La mas Hermosa <span style="color: red !important;">❤️</span></p>
 </div>
-<div id="draggable" class="paper">
-<p class="p1">Drag the papers to move!</p>
+<div class="paper draggable">
+<p class="p1">Buenos dias! 😘</p>
+<p class="p1">Puedes arrastras este papel que estorba? 👀</p>
 </div>
 <!-- javascript file -->
   <script src="script.js"></script>
